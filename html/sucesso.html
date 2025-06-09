@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sucesso!</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <!-- Bootstrap CSS via CDN -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Estilo Personalizado -->
+  <style>
+    body {
+      background: linear-gradient(135deg, #74ABE2, #5563DE);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .custom-container {
+      background: #fff;
+      padding: 40px;
+      border-radius: 10px;
+      width: 100%;
+      max-width: 600px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      animation: fadeIn 1s ease-in-out;
+    }
+    .custom-container h2 {
+      font-weight: 500;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    .custom-container p {
+      font-size: 1.1rem;
+      color: #555;
+    }
+    .btn-custom {
+      background-color: #5563DE;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      transition: background-color 0.3s;
+      text-decoration: none;
+      color: #fff;
+      display: inline-block;
+      margin-top: 15px;
+    }
+    .btn-custom:hover {
+      background-color: #4455b5;
+    }
+    .btn-secondary {
+      background: #6c757d;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      text-decoration: none;
+      color: #fff;
+      display: inline-block;
+      margin-top: 15px;
+      margin-left: 10px;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="custom-container">
+    <h2>Sucesso!</h2>
+    <p>Seu contato foi salvo com sucesso. Obrigado por entrar em contato!</p>
+    <p>
+      <a href="contato.html" class="btn-custom">Enviar Outro Contato</a>
+      <a href="list.php" class="btn-secondary">Visualizar Contatos</a>
+    </p>
+  </div>
+  
+  <!-- Bootstrap JS e dependências -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

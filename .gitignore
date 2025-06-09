@@ -1,0 +1,8 @@
+# Ignorar arquivos de log
+*.log
+
+# Ignorar a pasta do volume do MySQL (ou qualquer pasta de dados que não deve ser versionada)
+mysql_data/
+
+# Ignorar arquivos de ambiente, se você tiver algum arquivo .env
+.env

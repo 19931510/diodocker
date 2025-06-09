@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+  web:
+    image: httpd:latest
+    container_name: apache_server
+    ports:
+      - "8080:80"
+    volumes:
+      - ./html:/usr/local/apache2/htdocs/
+
+  db:
+    image: mysql:5.7
+    container_name: mysql_db
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: projeto_dio
+    ports:
+      - "3306:3306"

@@ -1,0 +1,40 @@
+<?php
+<?php
+var_dump($_POST);
+die();
+$servername = "mysql_db";
+$username = "root";
+$password = "root";
+$dbname = "projeto_dio";
+
+// Criar conexão
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+if ($conn->connect_error) {
+    die("Erro na conexão: " . $conn->connect_error);
+}
+
+// Debug: Exibir os dados recebidos
+echo "Dados Recebidos:<br>";
+var_dump($_POST);
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (isset($_POST["name"]) && isset($_POST["email"])) {
+        $nome = $conn->real_escape_string($_POST["name"]);
+        $email = $conn->real_escape_string($_POST["email"]);
+
+        $sql = "INSERT INTO contatos (nome, email) VALUES ('$nome', '$email')";
+        if ($conn->query($sql) === TRUE) {
+            echo "<br>Dados salvos com sucesso!";
+        } else {
+            echo "<br>Erro ao salvar os dados: " . $conn->error;
+        }
+    } else {
+        echo "<br>Erro: Campos obrigatórios não preenchidos.";
+    }
+} else {
+    echo "<br>Erro: Nenhum dado foi enviado.";
+}
+
+$conn->close();
+?>
